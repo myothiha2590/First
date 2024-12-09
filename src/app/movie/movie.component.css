@@ -1,0 +1,61 @@
+.card-title {
+    font-size: 1.25rem;
+    color: #343a40;
+    font-weight: 600;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .toalign{
+    float:inline-end;
+    margin: left 1000px;;
+  }
+  .back{
+    background-image: url('/assets/photo1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full height for the div */
+    width: 100%;
+  }
+
+  
+
+
+.navbar {
+  padding: 1rem 2rem; /* Adds padding for a more spaced-out feel */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem; /* Slightly larger text */
+  padding: 0.5rem 1rem; /* Adds padding around the links */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Adds a hover effect */
+  border-radius: 5px; /* Rounded edges for a smoother look */
+}
+
+.navbar-nav .active {
+  background-color: rgba(255, 255, 255, 0.3); /* Highlight the active link */
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+}

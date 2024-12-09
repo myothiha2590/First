@@ -1,0 +1,25 @@
+<div style="background-color: rgb(240, 236, 236); font-family: cursive">
+  <div *ngIf="loading" class="text-center">
+    <p>Loading...</p>
+  </div>
+
+  <div *ngIf="!loading && movieDetail">
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            [src]="'http://image.tmdb.org/t/p/w500/' + movieDetail.poster_path"
+            class="img-fluid"
+            alt="{{ movieDetail.title }}"
+          />
+        </div>
+        <div class="col-md-8">
+          <h2>{{ movieDetail.title }}</h2>
+          <p><strong>Release Date:</strong> {{ movieDetail.release_date }}</p>
+          <p><strong>Overview:</strong> {{ movieDetail.overview }}</p>
+          <p><strong>Rating:</strong> {{ movieDetail.vote_average }} / 10</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

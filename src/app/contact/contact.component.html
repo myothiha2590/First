@@ -1,0 +1,40 @@
+<div style="background-color: black; width: 100%">
+  <div class="container">
+    <!-- <div class="text-center mb-4">
+      <button
+        type="button"
+        class="btn btn-outline-success"
+        (click)="gettMovies()"
+      >
+        Popular Movies
+      </button>
+    </div> -->
+
+    <div *ngIf="!loading" class="row">
+      <div
+        *ngFor="let movie of movieListResultt; let i = index"
+        class="col-md-4 col-sm-6 mb-4"
+      >
+        <div class="card shadow-sm h-100">
+         
+
+          <div class="card-body text-center">
+            <a
+              [routerLink]="['/movie', movie.id]"
+              class="text-decoration-none"
+              >
+              <img
+              class="card-img-top img-fluid"
+              [src]="'http://image.tmdb.org/t/p/w500/' + movie.backdrop_path"
+              alt="{{ movie.title }}"
+              style="height: 200px; object-fit: cover"
+            />{{ movie.title }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

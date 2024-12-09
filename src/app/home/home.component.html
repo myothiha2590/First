@@ -1,0 +1,74 @@
+<div
+  style="
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(55, 52, 52);
+    margin-top: 1px;
+  "
+>
+  <div
+    class="justify-content-center bg-warning"
+    style="
+      text-align: center;
+      color: rgb(55, 52, 52);
+      font-size: 2rem;
+      font-family: cursive;
+    "
+  >
+    This is Now Playing Movies in Our Ceniplex!
+  </div>
+
+  <div *ngIf="!loading" class="row">
+    <div
+      *ngFor="let movie of movieListResultt; let i = index"
+      class="col-md-4 col-sm-6 mb-4"
+    >
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <a [routerLink]="['/movie', movie.id]" class="text-decoration-none">
+            <img
+              class="card-img-top img-fluid"
+              [src]="'http://image.tmdb.org/t/p/w500/' + movie.backdrop_path"
+              alt="{{ movie.title }}"
+              style="height: 200px; object-fit: cover"
+            />{{ movie.title }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="justify-content-center bg-warning"
+    style="
+      text-align: center;
+      color: rgb(55, 52, 52);
+      font-size: 2rem;
+      font-family: cursive;
+    "
+  >
+    This Is Popular Movies!
+  </div>
+  <div *ngIf="!loading" class="row" style="background-color: rgb(55, 52, 52)">
+    <div
+      *ngFor="let movie of movieListReult; let i = index"
+      class="col-md-4 col-sm-6 mb-4"
+    >
+      <div class="card shadow-sm h-100">
+        <div class="card-body text-center">
+          <a [routerLink]="['/movie', movie.id]" class="text-decoration-none">
+            <img
+              class="card-img-top img-fluid"
+              [src]="'http://image.tmdb.org/t/p/w500/' + movie.backdrop_path"
+              alt="{{ movie.title }}"
+              style="height: 200px; object-fit: cover"
+            />{{ movie.title }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="mb-5 bg-info" style="color: rgb(55, 52, 52)">
+    www.myothihahninphyusin.com
+  </footer>
+</div>
+<router-outlet></router-outlet>

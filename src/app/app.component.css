@@ -1,0 +1,76 @@
+.card-title {
+    font-size: 1.25rem;
+    color: #343a40;
+    font-weight: 600;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .toalign{
+    float:inline-end;
+    margin: left 1000px;;
+  }
+  .back{
+    background-image: url('/assets/photo1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full height for the div */
+    width: 100%;
+  }
+  footer{
+    font-family:cursive;
+    font-size: 2rem;
+    color: cornflowerblue;
+    text-align: center;
+    margin: 15%;
+
+}
+.navbar {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  color: #a9f5f5;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.navbar-toggler {
+  border: none;
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
+  }
+}
